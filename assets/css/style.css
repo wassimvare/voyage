@@ -659,6 +659,13 @@ p {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+#pay {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background:#eee;
+  padding-bottom: 50px;
+}
 #portfolio {
   width: 100%;
   height: auto;
@@ -676,7 +683,30 @@ p {
   padding: 2px 15px;
 }
 
+#pay #pay-flters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+
 #portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #999999;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#pay #pay-flters li {
   cursor: pointer;
   display: inline-block;
   padding: 10px 15px 8px 15px;
@@ -693,12 +723,24 @@ p {
 #portfolio #portfolio-flters li.filter-active {
   color: #b8a07e;
 }
+#pay #pay-flters li:hover,
+#pay #pay-flters li.filter-active {
+  color: #b8a07e;
+}
 
 #portfolio #portfolio-flters li:last-child {
   margin-right: 0;
 }
 
+#pay #pay-flters li:last-child {
+  margin-right: 0;
+}
+
 #portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+#pay .pay-item {
   margin-bottom: 30px;
 }
 
@@ -713,6 +755,17 @@ p {
   background: rgba(255, 255, 255, 0.9);
   padding: 15px;
 }
+#pay .pay-item .pay-pays {
+  opacity: 0;
+  position: absolute;
+  left: 10px;
+  right: 30px;
+  bottom: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+}
 
 #portfolio .portfolio-item .portfolio-info h4 {
   font-size: 18px;
@@ -720,8 +773,21 @@ p {
   font-weight: 600;
   margin-bottom: 10px;
 }
+#pay .pay-item .pay-pays h4 {
+  font-size: 18px;
+  color: #666;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
 
 #portfolio .portfolio-item .portfolio-info p {
+  color: #999;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+#pay .pay-item .pay-pays p {
   color: #999;
   font-size: 14px;
   margin: 0;
@@ -736,13 +802,28 @@ p {
   top: calc(50% - 18px);
   color: #b8a07e;
 }
+#pay .pay-item .pay-pays .preview-link,
+#pay .pay-item .pay-pays .details-link {
+  position: absolute;
+  right: 40px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  color: #b8a07e;
+}
 
 #portfolio .portfolio-item .portfolio-info .preview-link:hover,
 #portfolio .portfolio-item .portfolio-info .details-link:hover {
   color: #cab89f;
 }
+#pay .pay-item .pay-pays .preview-link:hover,
+#pay .pay-item .pay-pays .details-link:hover {
+  color: #cab89f;
+}
 
 #portfolio .portfolio-item .portfolio-info .details-link {
+  right: 10px;
+}
+#pay .pay-item .pay-pays .details-link {
   right: 10px;
 }
 
@@ -750,15 +831,24 @@ p {
   opacity: 1;
   bottom: 20px;
 }
-
+#pay .pay-item:hover .pay-pays {
+  opacity: 1;
+  bottom: 20px;
+}
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
 }
+.pay-details {
+  padding-top: 40px;
+}
 
 .portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+.pay-details .pay-details-slider img {
   width: 100%;
 }
 
@@ -784,7 +874,20 @@ p {
   box-shadow: 0px 0 30px rgba(75, 74, 74, 0.08);
 }
 
+.pay-details .pay-pays {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(75, 74, 74, 0.08);
+}
+
 .portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.pay-details .pay-pays h3 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -797,8 +900,16 @@ p {
   padding: 0;
   font-size: 15px;
 }
+.pay-details .pay-pays ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
 
 .portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+.pay-details .pay-pays ul li+li {
   margin-top: 10px;
 }
 
